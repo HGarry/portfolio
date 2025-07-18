@@ -140,6 +140,8 @@ p {
   border: 2px solid #7cf03d;
   border-radius: 50%;
   font-size: 20px;
+  color: #7cf03d;
+  margin: 0 8px;
   transition: 0.5s;
 }
 .home .home-info .btn-sci .sci a:hover {

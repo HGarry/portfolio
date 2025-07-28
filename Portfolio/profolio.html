@@ -11,20 +11,40 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="navbar">
-      <a href="" class="logo">Portfolio.</a>
-      <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+    <header class="active">
+      <a href="#" class="logo">Portfolio.</a>
 
-    <div class="bars-animation">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">Resume</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="bars-animation active">
       <div class="bar" style="--i: 6"></div>
       <div class="bar" style="--i: 5"></div>
       <div class="bar" style="--i: 4"></div>
@@ -33,7 +53,7 @@
       <div class="bar" style="--i: 1"></div>
     </div>
 
-    <section class="home">
+    <section class="home active">
       <div class="home-info">
         <h1>Harry Berry</h1>
         <h2>
@@ -66,9 +86,517 @@
       </div>
       <div class="home-img">
         <div class="img-box">
-          <div class="img-item"><img src="images/Harry.png" alt="" /></div>
+          <div class="img-item">
+            <img src="images/Harry.png" alt="profile-pic" />
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="resume">
+      <div class="resume-container">
+        <div class="resume-box">
+          <h2 class="heading-resume">Why Hire ME?</h2>
+          <p class="desc">
+            I’m a results-driven professional with proven success in finance,
+            networking, and sales leadership. Quick to adapt and committed to
+            growth, I’m also sharpening my frontend skills to bring fresh,
+            valuable perspectives. Hire me for a motivated, versatile
+            contributor ready to drive impact.
+          </p>
+          <button class="resume-btn active">Experience</button>
+          <button class="resume-btn">Education</button>
+          <button class="resume-btn">Skills</button>
+          <button class="resume-btn">About Me</button>
+        </div>
+        <div class="resume-box">
+          <div class="resume-detail experience active">
+            <h2 class="heading">My <span>Experience</span></h2>
+            <p class="desc">
+              I’ve successfully streamlined loan processes and boosted client
+              satisfaction at MAHAR BAWGA FINANCE, engineered high-performance
+              wireless networks with improved uptime and security, and
+              consistently exceeded sales targets while leading my team to
+              strong results at A-Z Online Shop. I am also actively learning and
+              creating frontend projects to build skills for my future career.
+            </p>
+            <div class="resume-list">
+              <!-- <div class="resume-item">
+                <p class="year">2023 - Present</p>
+                <h3>Frontend Developer</h3>
+                <p class="company">Abc Company</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, nobis! Quos odio magnam, omnis nostrum ipsa deleniti.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2022 - 2023</p>
+                <h3>Frontend Developer</h3>
+                <p class="company">Google Company</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, nobis! Quos odio magnam, omnis nostrum ipsa deleniti.
+                </p>
+              </div> -->
+              <div class="resume-item">
+                <p class="year">2022 - 2024</p>
+                <h3>Network Engineer</h3>
+                <p class="company">FRONTIIR Co.Ltd</p>
+                <p>
+                  Engineered enterprise wireless networks with 99.8% uptime,
+                  boosting signal strength by 30% and cutting issues by 40%.
+                  Strengthened security with WPA3-Enterprise and RADIUS,
+                  reducing breaches by 60%.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2021 - 2022</p>
+                <h3>Sales Supervisor</h3>
+                <p class="company">A-Z Online Shop</p>
+                <p>
+                  I consistently surpassed sales targets exceeding 1 million and
+                  successfully motivated my team to achieve similar results. By
+                  fostering a goal-driven environment and providing strong
+                  leadership, I helped boost overall team performance and sales
+                  growth.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2020 - 2021</p>
+                <h3>Office Staff</h3>
+                <p class="company">MAHAR BAWGA FINANCE</p>
+                <p>
+                  At MAHAR BAWGA FINANCE, I streamlined loan and leasing
+                  processes in the Car Department, cutting approval times and
+                  boosting client satisfaction to 95%. I handled over 50 cases
+                  monthly, ensuring accurate document checks and clear
+                  communication, which helped drive repeat business and
+                  operational efficiency.
+                </p>
+              </div>
+              <!-- <div class="resume-item">
+                <p class="year">2020 - 2021</p>
+                <h3>Frontend Developer</h3>
+                <p class="company">Xyz Company</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora, nobis! Quos odio magnam, omnis nostrum ipsa deleniti.
+                </p>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="resume-detail education">
+            <h2 class="heading">My <span>Education</span></h2>
+            <p class="desc">
+              weee Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis blanditiis a nesciunt similique officiis iusto odit
+              laboriosam rerum? Minima facilis veritatis reprehenderit quas
+              animi omnis atque consequuntur. Corporis, libero mollitia.
+            </p>
+
+            <div class="resume-list">
+              <div class="resume-item">
+                <p class="year">2024</p>
+                <h3>Programming Course</h3>
+                <p class="company">MT Coding-Tech</p>
+                <p>
+                  I joined foundational web development training at MT
+                  Coding-Tech, where I learned HTML, CSS, SASS, Bootstrap, and
+                  responsive design through hands-on projects. It’s a great
+                  program for building real, practical coding skills from
+                  scratch.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2023</p>
+                <h3>freeCodeCamp</h3>
+                <p class="company">Online Course</p>
+                <p>
+                  Self-learning HTML, CSS, and JavaScript through FreeCodeCamp,
+                  mastering core web development skills by completing hands-on
+                  projects and real-world challenges to build responsive,
+                  user-friendly websites. Committed to continuous growth and
+                  applying modern coding best practices.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2021</p>
+                <h3>Network Engineering</h3>
+                <p class="company">Docker Myanmar Technologies</p>
+                <p>
+                  Completed a comprehensive NE course mastering networking,
+                  servers, Cisco, AWS, security, and Linux with hands-on
+                  projects—ready to tackle real-world IT challenges confidently.
+                  This training sharpened my technical skills and
+                  problem-solving abilities for a fast-paced IT environment.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2020</p>
+                <h3>Programming Course</h3>
+                <p class="company">YGN NET Cloud Computing Technology</p>
+                <p>
+                  Completed Cloud Computing training at YGN NET, building strong
+                  skills in Windows OS, internet navigation, and Microsoft
+                  Office (Word, Excel, PowerPoint 2010) to confidently support
+                  modern cloud and business workflows.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2020</p>
+                <h3>Programming Course</h3>
+                <p class="company">PMI Professional Management Institute</p>
+                <p>
+                  Completed Sales & Marketing Management course at PMI
+                  Professional Management Institute, developing practical skills
+                  in sales strategies, market analysis, and customer
+                  relationship management.
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2019</p>
+                <h3>Mechanical Engineering</h3>
+                <p class="company">Hinthada Technological University</p>
+                <p>
+                  Studied Mechanical Engineering (first year) at Technological
+                  University Hinthada; studies were suspended due to COVID-19
+                  and the military coup.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-detail skills">
+            <h2 class="heading">My <span>Skills</span></h2>
+            <p class="desc">
+              I’m skilled in HTML, CSS3, SCSS, JavaScript, and Bootstrap,
+              creating clean, responsive, and engaging web experiences.
+              Alongside networking know-how and server basics, I’m also
+              confident using Microsoft Word, Excel, and PowerPoint to craft
+              polished documents and presentations. Always eager to learn and
+              bring energy to every project I tackle.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="resume-item">
+                <i class="bxl bx-javascript"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-brands fa-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Networking</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-solid fa-file-word"></i>
+                <span>Microsoft Word</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-solid fa-file-excel"></i>
+                <span>Microsoft Excel</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-solid fa-file-powerpoint"></i>
+                <span>Microsoft PowerPoint</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-detail about">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p class="desc">
+              I’m a motivated and adaptable professional with experience across
+              finance, networking, sales, and web development. I enjoy tackling
+              challenges, continuously learning new skills, and delivering
+              meaningful results. With a strong mix of technical knowledge and
+              customer-focused experience, I bring energy and a positive
+              attitude to every project and team I work with.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p>Name <span>Harry</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Gender <span>Male</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Age <span>23 Years</span></p>
+              </div>
+              <div class="resume-item">
+                <p>City <span>Bangkok</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Nationality <span>Myanmar</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Experience <span>1 Year+</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Full Time <span>Available</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Phone <span>(+66) 948 459 379</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Email <span>hinaryjoker22@gmail.com</span></p>
+              </div>
+              <div class="resume-item">
+                <p>Languages<span>English, Myanmar</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="projects-container">
+        <div class="projects-detail">
+          <div class="project-item active">
+            <div class="num">01</div>
+            <h2>Frontend Project</h2>
+            <p>
+              A modern and responsive card layout featuring three distinct
+              product/service previews with icons, titles, descriptions, and
+              call-to-action buttons. The goal of this challenge was to practice
+              component-based layout design and responsive styling techniques.
+            </p>
+            <h5>HTML5,SCSS</h5>
+            <div class="live-github">
+              <a href="https://challlanges-6jdr.vercel.app/"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="num">02</div>
+            <h2>Frontend Project</h2>
+            <p>
+              A responsive landing page component focused on showcasing social
+              proof through customer ratings and testimonials. The layout
+              highlights brand trust using structured visual hierarchy and
+              modern UI/UX principles.
+            </p>
+            <h5>HTML5,SCSS</h5>
+            <div class="live-github">
+              <a
+                href="https://challlanges-git-main-harrys-projects-65613e14.vercel.app/"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="num">03</div>
+            <h2>Frontend Project</h2>
+            <p>
+              A sleek and modern landing page designed for a creative agency.
+              The project emphasizes visual storytelling with bold typography,
+              vibrant imagery, and clear calls to action. The layout adapts
+              seamlessly across devices, ensuring an optimal user experience on
+              both desktop and mobile.
+            </p>
+            <h5>HTML5,SCSS,JavaScript</h5>
+            <div class="live-github">
+              <a
+                href="https://challlanges-f2u5.vercel.app/sunnyside-agency-landing-page-main/"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="num">04</div>
+            <h2>Frontend Project</h2>
+            <p>
+              A clean and responsive results summary card that displays a user's
+              test score along with category-based performance data. The
+              component is designed with a strong visual hierarchy to emphasize
+              the overall result and uses color-coded sections for clarity and
+              readability.
+            </p>
+            <h5>HTML5,SCSS</h5>
+            <div class="live-github">
+              <a href="#"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="num">05</div>
+            <h2>Frontend Project</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sit!
+            </p>
+            <h5>HTML5,CSS3,JavaScript</h5>
+            <div class="live-github">
+              <a href="#"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="num">06</div>
+            <h2>Frontend Project</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sit!
+            </p>
+            <h5>HTML5,CSS3,JavaScript</h5>
+            <div class="live-github">
+              <a href="#"
+                ><i class="fa-solid fa-arrow-left"></i><span>Live</span></a
+              >
+              <a href="#"><i class="bxl bx-github"></i> <span>GitHub</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-images">
+          <div class="owl-carousel owl-theme project-box">
+            <div class="item"><img src="images/3-Column.webp" alt="" /></div>
+            <div class="item">
+              <img src="images/Social-Proof.webp" alt="" />
+            </div>
+            <div class="item">
+              <img src="images/Sunny-side-agency.webp" alt="" />
+            </div>
+            <div class="item">
+              <img src="images/Result-summary.webp" alt="" />
+            </div>
+            <div class="item"><img src="images/3-Column.webp" alt="" /></div>
+            <div class="item"><img src="images/3-Column.webp" alt="" /></div>
+          </div>
+          <div class="navigation">
+            <button class="arrow-left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="arrow-right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-container">
+        <div class="contact-box">
+          <h2>Let's Work Together</h2>
+          <p class="desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
+            neque cupiditate deserunt a. Nobis perferendis, quo accusantium quos
+            repellat modi?
+          </p>
+          <div class="contact-detail">
+            <i class="fa-solid fa-phone"></i>
+            <div class="detail">
+              <p>Phone</p>
+              <p>(+66) 948 459 379</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="detail">
+              <p>Email</p>
+              <p>hinaryjoker22@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="detail">
+              <p>Address</p>
+              <p>
+                40 Ramkhamhaeng 52 Alley, Khwaeng Hua Mak, Khet Bang Kapi, Krung
+                Thep Maha Nakhon 10240
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-box">
+          <form action="">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+            <div class="field-box">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="text" placeholder="Phone Number" required />
+              <input type="text" placeholder="Email Subject" required />
+              <textarea
+                name=""
+                id=""
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // Wait until DOM is ready
+      $(document).ready(function () {
+        // 1. Initialize Owl Carousel
+        const owl = $(".owl-carousel").owlCarousel({
+          loop: false,
+          margin: 10,
+          nav: false,
+          dots: false,
+          items: 1,
+        });
+
+        // 2. Show matching .project-item
+        function showProjectItem(index) {
+          $(".project-item").removeClass("active");
+          $(".project-item").eq(index).addClass("active");
+        }
+
+        // 3. Arrow buttons
+        $(".arrow-left").click(function () {
+          owl.trigger("prev.owl.carousel");
+        });
+
+        $(".arrow-right").click(function () {
+          owl.trigger("next.owl.carousel");
+        });
+
+        // 4. On carousel change, update project item
+        owl.on("changed.owl.carousel", function (event) {
+          const index = event.item.index;
+          showProjectItem(index);
+        });
+
+        // 5. Show first project on load
+        showProjectItem(0);
+      });
+    </script>
   </body>
 </html>

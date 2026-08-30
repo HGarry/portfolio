@@ -11,7 +11,7 @@ interface SkillProps {
 function Skill({ name, image }:  SkillProps ) {
   return (
     <Grid
-      size={2}
+      size={{ xs: 12, sm: 4, md: 3, lg: 2 }}
       className={`${liquidStyles.card} flex flex-col gap-4 w-32 h-52  items-center `}
     >
       <Image

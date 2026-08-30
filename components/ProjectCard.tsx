@@ -14,64 +14,71 @@ type ProjectCardProps = {
     source: string;
   };
   index: number;
+  activeIndex: number;
   setActiveIndex: (index: number) => void;
   style?: React.CSSProperties;
 };
 
-function ProjectCard({ item, index, setActiveIndex, style }: ProjectCardProps) {
+function ProjectCard({
+  item,
+  index,
+  activeIndex,
+  setActiveIndex,
+  style,
+}: ProjectCardProps) {
+  const isActive = index === activeIndex;
+
   return (
     <div
-      key={item.id}
       onClick={() => setActiveIndex(index)}
       style={style}
-      className={`${liquidStyles.card} absolute w-[600px] sm:w-[340px] p-6 transition-all duration-500 ease-out cursor-pointer hover:border-orange-500/50 select-none flex flex-col justify-between]`}
+      className={`${liquidStyles.card} absolute w-[90vw] max-w-[340px] md:w-[520px] p-4 sm:p-6 transition-all duration-500 ease-out cursor-pointer select-none flex flex-col justify-between ${
+        !isActive ? "hidden md:block" : "block"
+      }`}
     >
       <div>
-        {/* Styled Quote Icon (99) */}
-        <div className="text-orange-500 font-serif text-3xl font-bold leading-none mb-3">
+        {/* Project Image */}
+        <div className="w-full h-36 sm:h-48 relative mb-3 overflow-hidden rounded-lg">
           <Image
             src={item.image}
             alt={`Screenshot of ${item.title}`}
-            width={500}
-            height={500}
+            fill
+            className="object-cover"
           />
         </div>
 
-        {/* Rating Stars */}
-        <div className="mb-4">
-          <h3>{item.title}</h3>
+        {/* Title */}
+        <div className="mb-2">
+          <h3 className="text-base sm:text-xl font-bold line-clamp-1">
+            {item.title}
+          </h3>
         </div>
 
-        <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-normal">
+        {/* Description */}
+        <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-normal line-clamp-3 sm:line-clamp-none">
           {item.quote}
         </p>
-        <div className="flex gap-3 justify-center">
-          <button
-            className={`${liquidStyles.button} flex items-center gap-2 mt-3`}
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 justify-center mt-4">
+          <a
+            href={item.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${liquidStyles.button} flex items-center gap-2 text-xs sm:text-sm px-3`}
           >
-            <a
-              href={item.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Live Site
-            </a>
-            <ArrowOutwardIcon />
-          </button>
-          <button
-            className={`${liquidStyles.button} flex items-center gap-2 mt-3`}
+            Live Site
+            <ArrowOutwardIcon fontSize="small" />
+          </a>
+          <a
+            href={item.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${liquidStyles.button} flex items-center gap-2 text-xs sm:text-sm px-3`}
           >
-            <a
-              href={item.source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=""
-            >
-              Source Code
-            </a>
-            <GitHubIcon />
-          </button>
+            Source Code
+            <GitHubIcon fontSize="small" />
+          </a>
         </div>
       </div>
     </div>

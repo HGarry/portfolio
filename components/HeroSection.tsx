@@ -1,7 +1,7 @@
 import Image from "next/image";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { liquidStyles } from "./styles/styles";
 
 function HeroSection() {
@@ -13,13 +13,13 @@ function HeroSection() {
     >
       <div className="flex flex-col-reverse items-center gap-6 lg:flex-row lg:justify-between lg:gap-0 lg:h-screen">
         <div
-          style={{ borderRadius: "51% 49% 80% 20% / 34% 30% 70% 66% " }}
-          className={`left w-full lg:w-xl lg:p-20 ${liquidStyles.card}`}
+          
+          className={`left w-full lg:w-xl lg:p-5`}
         >
           <h1
             className={`text-5xl mb-6 sm:text-6xl lg:text-7xl lg:mb-12 ${liquidStyles.heroHeadline} `}
           >
-            Hi, I&apos;m Harry
+            Hi, I&apos;m <span className="text-amber-300"> Harry</span>
           </h1>
           <p className={`${liquidStyles.glowTextCyan} text-xl pr-10`}>
             &quot;Frontend Developer crafting clean, responsive, and data-driven
@@ -27,14 +27,23 @@ function HeroSection() {
             building production-ready user interfaces with solid state
             management and intuitive interactions.&quot;
           </p>
-          <button className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}>
-            View Projects
+          <button
+            className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
+          >
+            <a
+              href="#projects"
+              rel="noopener noreferrer"
+            >
+              View Projects
+            </a>
           </button>
-          <button className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} mt-4 cursor-pointer`}>
+          {/* <button
+            className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} mt-4 cursor-pointer`}
+          >
             Download Resume / CV
-          </button>
+          </button> */}
         </div>
-        <div className={`${liquidStyles.img} rounded-4xl`}>
+        <div className={`lg:max-w-lg w-full ${liquidStyles.card}`}>
           <Image
             src="/images/profile.JPG"
             alt="profile"
@@ -42,24 +51,31 @@ function HeroSection() {
             height="500"
             className="h-auto w-full rounded-4xl"
           />
-          <ul className="flex flex-row mt-4 justify-around">
+          <ul className="flex flex-row mt-4 gap-6 justify-center items-center">
+            <li className={`text-2xl ${liquidStyles.glowTextWhite}`}><span className="text-amber-300">Find</span> Me On:</li>
             <li>
-              <GitHubIcon
-              sx={{width: 48, height: 48}}
-              className={`${liquidStyles.icon}`}
-          />
+              <a href="https://github.com/HGarry" target="_blank" rel="noopener noreferrer">
+                <GitHubIcon
+                  sx={{ width: 48, height: 48 }}
+                  className={`${liquidStyles.icon}`}
+                />
+              </a>
             </li>
+            {/* <li>
+              <a href="mailto:harrynotberry@gmail.com">
+                <EmailIcon
+                  sx={{ width: 48, height: 48 }}
+                  className={`${liquidStyles.icon}`}
+                />
+              </a>
+            </li> */}
             <li>
-              <EmailIcon
-              sx={{width: 48, height: 48}}
-              className={`${liquidStyles.icon}`}
-          />
-            </li>
-            <li>
-              <LinkedInIcon
-              sx={{width: 48, height: 48}}
-              className={`${liquidStyles.icon}`}
-          />
+              <a href="https://www.linkedin.com/in/kaung-si-thu-hein/" target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon
+                  sx={{ width: 48, height: 48 }}
+                className={`${liquidStyles.icon}`}
+              />
+              </a>
             </li>
           </ul>
         </div>

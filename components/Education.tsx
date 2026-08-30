@@ -14,7 +14,7 @@ type EducationProps = {
 function Education({ image, name, description }: EducationProps['edu']) {
   return (
     <Grid
-      size={4}
+      size={{ xs: 12, sm: 6, md: 6, lg: 4 }}
       className={`${liquidStyles.card} flex flex-col gap-4 w-2xl  items-center `}
     >
       <Image

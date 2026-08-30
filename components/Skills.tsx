@@ -72,7 +72,7 @@ function Skills() {
       // style={{ backgroundImage: "url('/images/hero2.jpg')" }}
     >
       <h2 className="items-center px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
-        Skills
+        S<span className="text-amber-300">kill</span>s
       </h2>
       <Grid container spacing={4}>
         {skills.map((skill) => (
@@ -80,7 +80,7 @@ function Skills() {
         ))}
       </Grid>
       <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10  backdrop-blur-md mb-4">
-        Education
+        Educati<span className="text-amber-300">on</span>
       </h2>
       <Grid container spacing={4}>
         {educations.map((education) => (

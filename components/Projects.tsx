@@ -3,6 +3,7 @@ import { IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ProductCard from "./ProjectCard";
+import { liquidStyles } from "./styles/styles";
 
 const testimonials = [
   {
@@ -12,7 +13,7 @@ const testimonials = [
     title: "Historical Places - Travel Suggestion App",
     image: "/images/projects/historical-places.jpeg",
     live: "https://historical-places-6h8dk2ysr-harrys-projects-65613e14.vercel.app/",
-    source: "https://github.com/HGarry/historical-places"
+    source: "https://github.com/HGarry/historical-places",
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ const testimonials = [
     title: "Shopper – Next.js Mini E-Commerce Platform",
     image: "/images/projects/mini-e-commerce.jpeg",
     live: "https://mini-ecommerce-rosy.vercel.app/",
-    source: "https://github.com/HGarry/mini-ecommerce"
+    source: "https://github.com/HGarry/mini-ecommerce",
   },
   {
     id: 3,
@@ -30,7 +31,7 @@ const testimonials = [
     title: "E-commerce Product Page",
     image: "/images/projects/e-commerce-page.webp",
     live: "https://ecommerce-product-page-main-ruby-five.vercel.app/",
-    source: "https://github.com/HGarry/ecommerce-product-page-main"
+    source: "https://github.com/HGarry/ecommerce-product-page-main",
   },
   {
     id: 4,
@@ -39,7 +40,7 @@ const testimonials = [
     title: "Loop Landing Studio",
     image: "/images/projects/movie-landing-page.webp",
     live: "https://loopstudio-landing-page-ecru.vercel.app/",
-    source: "https://github.com/HGarry/loopstudio-landing-page"
+    source: "https://github.com/HGarry/loopstudio-landing-page",
   },
   {
     id: 5,
@@ -48,9 +49,8 @@ const testimonials = [
     title: "Social Media Dashboard",
     image: "/images/projects/social-media.webp",
     live: "https://social-media-dashboard-two-mauve.vercel.app/",
-    source: "https://github.com/HGarry/social-media-dashboard"
+    source: "https://github.com/HGarry/social-media-dashboard",
   },
-
   {
     id: 6,
     quote:
@@ -58,9 +58,8 @@ const testimonials = [
     title: "Time Tracking Dashboard",
     image: "/images/projects/time-tracking.webp",
     live: "https://time-tracking-dashboard-main-s4b6.vercel.app/",
-    source: "https://github.com/HGarry/time-tracking-dashboard-main"
+    source: "https://github.com/HGarry/time-tracking-dashboard-main",
   },
-
   {
     id: 7,
     quote:
@@ -68,7 +67,7 @@ const testimonials = [
     title: "Agency Landing Page",
     image: "/images/projects/agency-landing-page.webp",
     live: "https://vercel.com/harrys-projects-65613e14/agency-landing-page",
-    source: "https://github.com/HGarry/agency-landing-page"
+    source: "https://github.com/HGarry/agency-landing-page",
   },
   {
     id: 8,
@@ -77,17 +76,16 @@ const testimonials = [
     title: "Social Proof Section",
     image: "/images/projects/social-proof-section.webp",
     live: "https://social-proof-section-iota-snowy.vercel.app/",
-    source: "https://github.com/HGarry/social-proof-section"
+    source: "https://github.com/HGarry/social-proof-section",
   },
   {
     id: 9,
     quote:
       "A clean and responsive results summary card that displays a user's test score along with category-based performance data. The component is designed with a strong visual hierarchy to emphasize the overall result and uses color-coded sections for clarity and readability.",
-    name: "James Chen",
     title: "Results Summary Component",
     image: "/images/projects/result-summary.webp",
     live: "https://result-summary-bay-eight.vercel.app/",
-    source: "https://github.com/HGarry/result-summary"
+    source: "https://github.com/HGarry/result-summary",
   },
   {
     id: 10,
@@ -96,7 +94,7 @@ const testimonials = [
     title: "3-column Preview Card Component",
     image: "/images/projects/3-column.webp",
     live: "https://3-clolum-preview-card.vercel.app/",
-    source: "https://github.com/HGarry/3-column-preview-card"
+    source: "https://github.com/HGarry/3-column-preview-card",
   },
 ];
 
@@ -111,7 +109,6 @@ export default function TestimonialCarousel() {
     setActiveIndex((prev) => (prev < testimonials.length - 1 ? prev + 1 : 0));
   };
 
-  // 3D Horizontal Ring Layout Logic
   const getCardStyle = (index: number) => {
     const offset = index - activeIndex;
     const absOffset = Math.abs(offset);
@@ -124,11 +121,8 @@ export default function TestimonialCarousel() {
       };
     }
 
-    // Spread cards horizontally across the screen
     const translateX = offset * 330;
-    // Push side cards back into 3D depth
     const translateZ = absOffset * 240;
-    // Rotate cards inward to face center stage
     const rotateY = offset * -28;
     const scale = 1 - absOffset * 0.1;
     const opacity = 1 - absOffset * 0.25;
@@ -144,18 +138,17 @@ export default function TestimonialCarousel() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen text-white py-12 px-4 overflow-hidden flex flex-col items-center bg-cover justify-between"
-      // style={{ backgroundImage: "url('/images/hero3.jpg')" }}
+      className="relative min-h-screen text-white py-12 px-4 overflow-hidden flex flex-col items-center justify-between"
     >
-      <div className="relative z-0 flex flex-col items-center mt-6 mb-4">
-        <div className="px-3 py-1 rounded-full text-2xl tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
-          Projects
+      <div className="relative flex flex-col items-center mt-6 mb-4">
+        <div className="px-4 py-1.5 rounded-full text-xl sm:text-2xl tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
+         <span className="text-amber-300">Pro</span>jects
         </div>
       </div>
 
       {/* 3D Carousel Stage */}
       <div
-        className="relative w-full max-w-7xl h-[400px] flex items-center justify-center"
+        className="relative w-full max-w-7xl h-[440px] sm:h-[460px] flex items-center justify-center"
         style={{ perspective: "1000px" }}
       >
         <div
@@ -167,9 +160,10 @@ export default function TestimonialCarousel() {
 
             return (
               <ProductCard
-                key={index}
+                key={item.id}
                 item={item}
                 index={index}
+                activeIndex={activeIndex}
                 setActiveIndex={setActiveIndex}
                 style={style}
               />
@@ -178,13 +172,8 @@ export default function TestimonialCarousel() {
         </div>
       </div>
 
-      {/* Wide Glowing Horizontal Floor Arc */}
-      {/* <div className="relative w-full max-w-3xl h-12 flex justify-center items-center overflow-hidden pointer-events-none -mt-6">
-        <div className="w-[750px] h-[300px] border-t-2 border-orange-500/80 rounded-[50%] shadow-[0_-18px_35px_rgba(249,115,22,0.65)]" />
-      </div> */}
-
-      {/* Navigation Buttons */}
-      <div className="relative z-0 flex items-center gap-2 p-1.5 rounded-full border border-white/15 backdrop-blur-md mb-6">
+      {/* Controls */}
+      <div className={`relative flex items-center gap-2 ${liquidStyles.button}`}>
         <IconButton onClick={handlePrev} size="small" sx={{ color: "#fafafa" }}>
           <ChevronLeftIcon fontSize="small" />
         </IconButton>

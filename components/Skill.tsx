@@ -2,6 +2,7 @@ import React from "react";
 import { liquidStyles } from "./styles/styles";
 import Image from "next/image";
 import { Grid } from "@mui/material";
+import { StaggerItem } from "./Animation";
 
 interface SkillProps {
   name: string;
@@ -12,9 +13,11 @@ function Skill({ name, image }:  SkillProps ) {
   return (
     <Grid
       size={{ xs: 12, sm: 4, md: 3, lg: 2 }}
-      className={`${liquidStyles.card} flex flex-col gap-4 w-32 h-52  items-center `}
+      
     >
-      <Image
+      <StaggerItem className="h-full w-full">
+      <div className={`${liquidStyles.card}w-full h-full flex flex-col gap-4 items-center `}>
+    <Image
         src={image}
         alt={name}
         width={100}
@@ -22,6 +25,9 @@ function Skill({ name, image }:  SkillProps ) {
         className="object-fit"
       />
       <h3 className="text-xl text-white ">{name}</h3>
+      </div>
+      </StaggerItem>
+      
     </Grid>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Skill from "./Skill";
 import Education from "./Education";
+import { StaggerGrid, FadeIn } from "./Animation";
 
 const skills = [
   {
@@ -39,7 +40,18 @@ const skills = [
     name: "TanStack Query",
     image: "/images/skills/tanstack.svg",
   },
+  {
+    id: 8,
+    name: "TypeScript",
+    image: "/images/skills/ts-logo.svg",
+  },
+  {
+    id: 9,
+    name: "GitHub",
+    image: "/images/skills/github.svg",
+  },
 ];
+
 const educations = [
   {
     id: 1,
@@ -68,25 +80,47 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen text-white py-12 px-4 overflow-hidden flex flex-col gap-6 justify-center bg-cover"
-      // style={{ backgroundImage: "url('/images/hero2.jpg')" }}
+      className="min-h-screen text-white py-12 px-4 sm:px-6 overflow-hidden flex flex-col gap-8 scroll-mt-24"
     >
-      <h2 className="items-center px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
-        S<span className="text-amber-300">kill</span>s
-      </h2>
-      <Grid container spacing={4}>
-        {skills.map((skill) => (
-          <Skill key={skill.id} {...skill} />
-        ))}
-      </Grid>
-      <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10  backdrop-blur-md mb-4">
-        Educati<span className="text-amber-300">on</span>
-      </h2>
-      <Grid container spacing={4}>
-        {educations.map((education) => (
-          <Education key={education.id} {...education} />
-        ))}
-      </Grid>
+      {/* 1. Skills Heading */}
+      <FadeIn direction="up">
+        <div className="flex justify-center">
+          <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
+          S
+          <span aria-hidden="true" className="text-amber-300">
+            kill
+          </span>
+          s
+        </h2>
+        </div>
+      </FadeIn>
+
+      <StaggerGrid className="w-full mb-8">
+        <Grid container spacing={3} className="w-full justify-center">
+          {skills.map((skill) => (
+            <Skill key={skill.id} {...skill} />
+          ))}
+        </Grid>
+      </StaggerGrid>
+
+      <FadeIn direction="up">
+        <div className="flex justify-center">
+          <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
+          Educati
+          <span aria-hidden="true" className="text-amber-300">
+            on
+          </span>
+        </h2>
+        </div>
+      </FadeIn>
+
+      <StaggerGrid className="w-full">
+        <Grid container spacing={3} className="w-full justify-center">
+          {educations.map((education) => (
+            <Education key={education.id} {...education} />
+          ))}
+        </Grid>
+      </StaggerGrid>
     </section>
   );
 }

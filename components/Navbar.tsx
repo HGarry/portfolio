@@ -1,25 +1,56 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { liquidStyles } from "./styles/styles";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
     <nav
-      className={`${liquidStyles.nav} ${liquidStyles.glowTextWhite} fixed inset-x-4 top-4 z-10 m-0 flex w-auto flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-2xl p-4 sm:inset-x-5 sm:top-5 sm:p-6`}
+      className={`${liquidStyles.nav} ${liquidStyles.glowTextWhite} fixed inset-x-4 top-4 z-50 m-0 flex flex-col md:flex-row md:items-center justify-between rounded-2xl p-4 sm:inset-x-5 sm:top-5 sm:p-6 transition-all duration-300`}
     >
-      <h2 className={`text-2xl font-extrabold`}>Harry&apos;s <span className="text-amber-300">Portfolio</span></h2>
-      <ul className="flex flex-wrap justify-end gap-x-5 gap-y-1 ">
-        <li className={`${liquidStyles.link}`}>
-          <a href="#home">Home</a>
-        </li>
-        <li className={`${liquidStyles.link}`}>
-          <a href="#skills">Skills</a>
-        </li>
-        <li className={`${liquidStyles.link}`}>
-          <a href="#projects">Projects</a>
-        </li>
-        <li className={`${liquidStyles.link}`}>
-          <a href="#contact">Contact</a>
-        </li>
+      {/* Top Header Row */}
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <h2 className="text-2xl font-extrabold">
+          Harry&apos;s <span className="text-amber-300">Portfolio</span>
+        </h2>
+
+        {/* MUI Hamburger / Close Button (Visible only on Mobile) */}
+        <div className="md:hidden">
+          <IconButton
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="toggle menu"
+            sx={{ color: "#fafafa" }}
+          >
+            {isOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+        </div>
+      </div>
+
+      {/* Navigation List */}
+      <ul
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } md:flex flex-col md:flex-row w-full md:w-auto gap-y-4 md:gap-x-5 pt-4 md:pt-0 border-t md:border-t-0 border-white/10 mt-3 md:mt-0 items-center`}
+      >
+        {navLinks.map((link) => (
+          <li key={link.name} className={`${liquidStyles.link}`}>
+            <a href={link.href} onClick={() => setIsOpen(false)}>
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

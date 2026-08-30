@@ -22,10 +22,10 @@ function HeroSection() {
             Hi, I&apos;m <span className="text-amber-300"> Harry</span>
           </h1>
           <p className={`${liquidStyles.glowTextCyan} text-xl pr-10`}>
-            &quot;Frontend Developer crafting clean, responsive, and data-driven
+            Frontend Developer crafting clean, responsive, and data-driven
             web applications with React, Next.js, and Tailwind CSS. Focused on
             building production-ready user interfaces with solid state
-            management and intuitive interactions.&quot;
+            management and intuitive interactions.
           </p>
           <button
             className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
@@ -54,7 +54,7 @@ function HeroSection() {
           <ul className="flex flex-row mt-4 gap-6 justify-center items-center">
             <li className={`text-2xl ${liquidStyles.glowTextWhite}`}><span className="text-amber-300">Find</span> Me On:</li>
             <li>
-              <a href="https://github.com/HGarry" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/HGarry" target="_blank" aria-label="GitHub Profile" rel="noopener noreferrer">
                 <GitHubIcon
                   sx={{ width: 48, height: 48 }}
                   className={`${liquidStyles.icon}`}
@@ -70,7 +70,7 @@ function HeroSection() {
               </a>
             </li> */}
             <li>
-              <a href="https://www.linkedin.com/in/kaung-si-thu-hein/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/kaung-si-thu-hein/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon
                   sx={{ width: 48, height: 48 }}
                 className={`${liquidStyles.icon}`}

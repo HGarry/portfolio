@@ -66,7 +66,7 @@ const testimonials = [
       "A sleek and modern landing page designed for a creative agency. The project emphasizes visual storytelling with bold typography, vibrant imagery, and clear calls to action. The layout adapts seamlessly across devices, ensuring an optimal user experience on both desktop and mobile.",
     title: "Agency Landing Page",
     image: "/images/projects/agency-landing-page.webp",
-    live: "https://vercel.com/harrys-projects-65613e14/agency-landing-page",
+    live: "https://agency-landing-page-amber-rho.vercel.app/",
     source: "https://github.com/HGarry/agency-landing-page",
   },
   {

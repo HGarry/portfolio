@@ -79,26 +79,26 @@ function Contact() {
                 size={{ xs: 12, md: 12, lg: 6 }}
                 className={`${liquidStyles.card}`}
               >
-                <input type="text" placeholder="Full Name" required />
+                <input type="text" placeholder="Full Name" required  className={`${liquidStyles.input}`}/>
               </Grid>
               <Grid
                 size={{ xs: 12, md: 12, lg: 6 }}
                 className={`${liquidStyles.card}`}
               >
-                <input type="email" placeholder="Email Address" required />
+                <input type="email" placeholder="Email Address" required  className={`${liquidStyles.input}`}/>
               </Grid>
               <Grid size={12} className={`${liquidStyles.card}`}>
-                <input type="text" placeholder="Phone Number" required />
+                <input type="text" placeholder="Phone Number" required className={`${liquidStyles.input}`}/>
               </Grid>
               <Grid size={12} className={`${liquidStyles.card}`}>
-                <input type="text" placeholder="Email Subject" required />
+                <input type="text" placeholder="Email Subject" required  className={`${liquidStyles.input}`}/>
               </Grid>
               <Grid size={12} className={`${liquidStyles.card}`}>
                 <textarea
                   name=""
                   id=""
                   placeholder="Your Message"
-                  required
+                  required className={`${liquidStyles.input}`}
                 ></textarea>
               </Grid>
             </Grid>

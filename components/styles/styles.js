@@ -15,6 +15,7 @@ export const liquidStyles = {
     "text-white drop-shadow-[0_0_12px_rgba(56,189,248,0.7)] drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]",
   heroHeadline:
     "text-5xl font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]",
+  input: "w-full outline-none focus:outline-none focus:ring-0",
 };
 
 export const skillCards = [{}];

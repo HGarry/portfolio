@@ -11,21 +11,21 @@ type EducationProps = {
   };
 };
 
-function Education({ edu }: EducationProps) {
+function Education({ image, name, description }: EducationProps['edu']) {
   return (
     <Grid
       size={4}
       className={`${liquidStyles.card} flex flex-col gap-4 w-2xl  items-center `}
     >
       <Image
-        src={edu.image}
-        alt={edu.name}
+        src={image}
+        alt={name}
         width={100}
         height={100}
         className="object-fit"
       />
-      <h3 className="text-xl text-white ">{edu.name}</h3>
-      <p>{edu.description}</p>
+      <h3 className="text-xl text-white ">{name}</h3>
+      <p>{description}</p>
     </Grid>
   );
 }

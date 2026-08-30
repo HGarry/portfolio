@@ -39,7 +39,7 @@ function Contact() {
             <LocationOnIcon sx={{color: "#fafafa"}} />
             <Grid size={8} className={`${liquidStyles.glowTextCyan}`}>
               <p>Address</p>
-              <p>No.751, Thamine 3st, Mayangone Tsp, Myanmar</p>
+              <p>Yangon, Myanmar</p>
             </Grid>
           </Grid>
           </Grid>

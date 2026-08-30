@@ -16,7 +16,7 @@ const skills = [
   },
   {
     id: 3,
-    name: "Java Script",
+    name: "JavaScript",
     image: "/images/skills/java-script.png",
   },
   {
@@ -36,7 +36,7 @@ const skills = [
   },
   {
     id: 7,
-    name: "Tanstack Query",
+    name: "TanStack Query",
     image: "/images/skills/tanstack.svg",
   },
 ];
@@ -76,7 +76,7 @@ function Skills() {
       </h2>
       <Grid container spacing={4}>
         {skills.map((skill) => (
-          <Skill key={skill.id} skill={skill} />
+          <Skill key={skill.id} {...skill} />
         ))}
       </Grid>
       <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10  backdrop-blur-md mb-4">
@@ -84,7 +84,7 @@ function Skills() {
       </h2>
       <Grid container spacing={4}>
         {educations.map((education) => (
-          <Education key={education.id} edu={education} />
+          <Education key={education.id} {...education} />
         ))}
       </Grid>
     </section>

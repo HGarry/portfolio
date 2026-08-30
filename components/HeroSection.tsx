@@ -1,5 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { liquidStyles } from "./styles/styles";
 
 function HeroSection() {
@@ -19,12 +21,18 @@ function HeroSection() {
           >
             Hi, I&apos;m Harry
           </h1>
-          <p className={`${liquidStyles.glowTextCyan}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            molestias qui quisquam repudiandae magnam eos dolor ex sed
-            repellendus beatae fugiat! Laborum accusantium pariatur obcaecati
-            sint expedita odio quo qui.
+          <p className={`${liquidStyles.glowTextCyan} text-xl pr-10`}>
+            &quot;Frontend Developer crafting clean, responsive, and data-driven
+            web applications with React, Next.js, and Tailwind CSS. Focused on
+            building production-ready user interfaces with solid state
+            management and intuitive interactions.&quot;
           </p>
+          <button className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}>
+            View Projects
+          </button>
+          <button className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} mt-4 cursor-pointer`}>
+            Download Resume / CV
+          </button>
         </div>
         <div className={`${liquidStyles.img} rounded-4xl`}>
           <Image
@@ -36,31 +44,22 @@ function HeroSection() {
           />
           <ul className="flex flex-row mt-4 justify-around">
             <li>
-              <Image
-                src="/images/github.png"
-                width={500}
-                height={500}
-                className={`w-8 ${liquidStyles.icon}`}
-                alt="github"
-              />
+              <GitHubIcon
+              sx={{width: 48, height: 48}}
+              className={`${liquidStyles.icon}`}
+          />
             </li>
             <li>
-              <Image
-                src="/images/email.png"
-                width={500}
-                height={500}
-                className={`w-8 ${liquidStyles.icon}`}
-                alt="email"
-              />
+              <EmailIcon
+              sx={{width: 48, height: 48}}
+              className={`${liquidStyles.icon}`}
+          />
             </li>
             <li>
-              <Image
-                src="/images/linkedin-logo.png"
-                width={500}
-                height={500}
-                className={`w-8 object-contain ${liquidStyles.icon}`}
-                alt="linkedin"
-              />
+              <LinkedInIcon
+              sx={{width: 48, height: 48}}
+              className={`${liquidStyles.icon}`}
+          />
             </li>
           </ul>
         </div>

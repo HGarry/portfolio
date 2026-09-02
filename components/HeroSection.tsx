@@ -4,6 +4,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { liquidStyles } from "./styles/styles";
 import { FadeIn } from "./Animation";
+import DownloadCVButton from "./DownloadCV";
 
 function HeroSection() {
   return (
@@ -28,47 +29,45 @@ function HeroSection() {
               building production-ready user interfaces with solid state
               management and intuitive interactions.
             </p>
-          </FadeIn >
-          <FadeIn direction="up" delay={0.3}><button
-            className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
-          >
-            <a href="#projects" rel="noopener noreferrer">
-              View Projects
-            </a>
-          </button></FadeIn>
-          {/* <button
-            className={`${liquidStyles.iconBox} ${liquidStyles.glowTextWhite} mt-4 cursor-pointer`}
-          >
-            Download Resume / CV
-          </button> */}
+          </FadeIn>
+          <FadeIn direction="up" delay={0.3}>
+            <button
+              className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
+            >
+              <a href="#projects" rel="noopener noreferrer">
+                View Projects
+              </a>
+            </button>
+            <DownloadCVButton />
+          </FadeIn>
         </div>
         <FadeIn direction="left" delay={0.3}>
           <div className={`lg:max-w-lg w-full ${liquidStyles.card}`}>
-          <Image
-            src="/images/profile.JPG"
-            alt="profile"
-            width="500"
-            height="500"
-            className="h-auto w-full rounded-4xl"
-          />
-          <ul className="flex flex-row mt-4 gap-6 justify-center items-center">
-            <li className={`text-2xl ${liquidStyles.glowTextWhite}`}>
-              <span className="text-amber-300">Find</span> Me On:
-            </li>
-            <li>
-              <a
-                href="https://github.com/HGarry"
-                target="_blank"
-                aria-label="GitHub Profile"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon
-                  sx={{ width: 48, height: 48 }}
-                  className={`${liquidStyles.icon}`}
-                />
-              </a>
-            </li>
-            {/* <li>
+            <Image
+              src="/images/profile.JPG"
+              alt="profile"
+              width="500"
+              height="500"
+              className="h-auto w-full rounded-4xl"
+            />
+            <ul className="flex flex-row mt-4 gap-6 justify-center items-center">
+              <li className={`text-2xl ${liquidStyles.glowTextWhite}`}>
+                <span className="text-amber-300">Find</span> Me On:
+              </li>
+              <li>
+                <a
+                  href="https://github.com/HGarry"
+                  target="_blank"
+                  aria-label="GitHub Profile"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon
+                    sx={{ width: 48, height: 48 }}
+                    className={`${liquidStyles.icon}`}
+                  />
+                </a>
+              </li>
+              {/* <li>
               <a href="mailto:harrynotberry@gmail.com">
                 <EmailIcon
                   sx={{ width: 48, height: 48 }}
@@ -76,21 +75,21 @@ function HeroSection() {
                 />
               </a>
             </li> */}
-            <li>
-              <a
-                href="https://www.linkedin.com/in/kaung-si-thu-hein/"
-                aria-label="LinkedIn Profile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon
-                  sx={{ width: 48, height: 48 }}
-                  className={`${liquidStyles.icon}`}
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kaung-si-thu-hein/"
+                  aria-label="LinkedIn Profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon
+                    sx={{ width: 48, height: 48 }}
+                    className={`${liquidStyles.icon}`}
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </FadeIn>
       </div>
     </section>

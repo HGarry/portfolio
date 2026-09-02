@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -6,16 +9,44 @@ import { Grid } from "@mui/material";
 import { FadeIn } from "./Animation";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevents page refresh
+
+    const mailSubject = encodeURIComponent(
+      formData.subject || "Portfolio Contact Inquiry",
+    );
+    const mailBody = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`,
+    );
+
+    // Opens default email app with form data pre-filled
+    window.location.href = `mailto:harrynotberry@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+  };
+
   return (
     <section id="contact" className="p-6 py-12 scroll-mt-24">
       <Grid container spacing={4} className="h-1/2">
-        
-          <Grid
-            size={{ xs: 12, md: 12, lg: 6 }}
-            className={`${liquidStyles.card} w-3xl`}
-          >
-            <FadeIn direction="right">
-              <Grid container spacing={5} className="justify-center items-center">
+        <Grid
+          size={{ xs: 12, md: 12, lg: 6 }}
+          className={`${liquidStyles.card} w-3xl`}
+        >
+          <FadeIn direction="right">
+            <Grid container spacing={5} className="justify-center items-center">
               <h2 className={`${liquidStyles.heroHeadline} mb-6`}>
                 Let&apos;s Work{" "}
                 <span className="text-amber-300">Together!</span>
@@ -68,14 +99,14 @@ function Contact() {
                 </Grid>
               </Grid>
             </Grid>
-            </FadeIn>
-          </Grid>
-          <Grid
-            size={{ xs: 12, md: 12, lg: 6 }}
-            className={`${liquidStyles.card} w-3xl`}
-          >
-            <FadeIn direction="left">
-              <form action="">
+          </FadeIn>
+        </Grid>
+        <Grid
+          size={{ xs: 12, md: 12, lg: 6 }}
+          className={`${liquidStyles.card} w-3xl`}
+        >
+          <FadeIn direction="left">
+            <form onSubmit={handleSubmit}>
               <h2 className={`${liquidStyles.heroHeadline} mb-4`}>
                 Contact <span className="text-amber-300">Me!</span>
               </h2>
@@ -90,6 +121,9 @@ function Contact() {
                 >
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Full Name"
                     required
                     className={`${liquidStyles.input}`}
@@ -101,6 +135,9 @@ function Contact() {
                 >
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email Address"
                     required
                     className={`${liquidStyles.input}`}
@@ -109,6 +146,9 @@ function Contact() {
                 <Grid size={12} className={`${liquidStyles.card}`}>
                   <input
                     type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Phone Number"
                     required
                     className={`${liquidStyles.input}`}
@@ -117,6 +157,9 @@ function Contact() {
                 <Grid size={12} className={`${liquidStyles.card}`}>
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Email Subject"
                     required
                     className={`${liquidStyles.input}`}
@@ -124,8 +167,9 @@ function Contact() {
                 </Grid>
                 <Grid size={12} className={`${liquidStyles.card}`}>
                   <textarea
-                    name=""
-                    id=""
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Your Message"
                     required
                     className={`${liquidStyles.input}`}
@@ -136,8 +180,8 @@ function Contact() {
                 Send Message
               </button>
             </form>
-            </FadeIn>
-          </Grid>
+          </FadeIn>
+        </Grid>
       </Grid>
     </section>
   );

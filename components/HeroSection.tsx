@@ -12,7 +12,7 @@ function HeroSection() {
       // style={{ backgroundImage: "url('/images/hero.jpg')" }}
       className="lg:w-screen w-full bg-cover overflow-hidden p-4 sm:p-6 md:p-8 lg:p-0 lg:pt-5 lg:px-8 flex flex-col justify-center pt-36 scroll-mt-24"
     >
-      <div className="lg:w-[80%] mx-auto flex flex-col-reverse items-center gap-6 lg:flex-row lg:justify-between lg:gap-0 lg:h-screen">
+      <div className="lg:w-[80%] md:w-[90%] mx-auto flex flex-col-reverse items-center gap-6 lg:flex-row lg:justify-between lg:gap-0 lg:h-screen">
         <div className={`left w-full lg:w-xl lg:p-5`}>
           <FadeIn direction="right" delay={0.3}>
             <h1
@@ -31,7 +31,7 @@ function HeroSection() {
           </FadeIn>
           <FadeIn direction="up" delay={0.3}>
             <button
-              className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
+              className={`${liquidStyles.buttonHero} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
             >
               <a href="#projects" rel="noopener noreferrer">
                 View Projects
@@ -44,10 +44,13 @@ function HeroSection() {
           <div className={`lg:max-w-lg w-full ${liquidStyles.card}`}>
             <Image
               src="/images/profile.JPG"
-              alt="profile"
-              width="500"
-              height="500"
-              className="h-auto w-full rounded-4xl"
+              alt="Harry's profile picture"
+              width={400}
+              height={400}
+              priority
+              quality={80}
+              sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 400px"
+              className="h-auto w-full rounded-4xl object-cover"
             />
             <ul className="flex flex-row mt-4 gap-6 justify-center items-center">
               <li className={`text-2xl ${liquidStyles.glowTextWhite}`}>

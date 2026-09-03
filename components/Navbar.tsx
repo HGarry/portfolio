@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`${liquidStyles.nav} ${liquidStyles.glowTextWhite} lg:w-[80%] m-auto fixed inset-x-4 top-4 z-50 flex flex-col md:flex-row md:items-center justify-between rounded-2xl p-4 sm:inset-x-5 sm:top-5 sm:p-6 transition-all duration-300`}
+      className={`${liquidStyles.nav} ${liquidStyles.glowTextWhite} lg:w-[80%] md:w-[90%] m-auto fixed inset-x-4 top-4 z-50 flex flex-col md:flex-row md:items-center justify-between rounded-2xl p-4 sm:inset-x-5 sm:top-5 sm:p-6 transition-all duration-300`}
     >
       {/* Top Header Row */}
       <div className="flex items-center justify-between w-full md:w-auto">

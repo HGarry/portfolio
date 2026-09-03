@@ -39,7 +39,10 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="lg:w-[80%] mx-auto p-6 py-12 scroll-mt-24">
+    <section
+      id="contact"
+      className="lg:w-[80%] md:w-[90%] mx-auto p-6 py-12 scroll-mt-24"
+    >
       <Grid container spacing={4} className="h-1/2">
         <Grid
           size={{ xs: 12, md: 12, lg: 6 }}

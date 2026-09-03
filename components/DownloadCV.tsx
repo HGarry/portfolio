@@ -4,7 +4,7 @@ import { liquidStyles } from "./styles/styles";
 export default function DownloadCVButton() {
   return (
     <button
-      className={`${liquidStyles.button} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
+      className={`${liquidStyles.buttonHero} ${liquidStyles.glowTextWhite} cursor-pointer mt-4 mr-2`}
     >
       <a
         href="/Kaung-Si-Thu-Hein-CV.pdf"

@@ -80,7 +80,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="lg:w-[80%] mx-auto min-h-screen text-white py-12 px-4 sm:px-6 overflow-hidden flex flex-col gap-8 scroll-mt-24"
+      className="lg:w-[80%] md:w-[90%] mx-auto min-h-screen text-white py-12 px-4 sm:px-6 overflow-hidden flex flex-col gap-8 scroll-mt-24"
     >
       {/* 1. Skills Heading */}
       <FadeIn direction="up">
@@ -115,7 +115,7 @@ function Skills() {
       </FadeIn>
 
       <StaggerGrid className="w-full">
-        <Grid container spacing={3} className="w-full justify-center">
+        <Grid container spacing={3} className="w-full">
           {educations.map((education) => (
             <Education key={education.id} {...education} />
           ))}

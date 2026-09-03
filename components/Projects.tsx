@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -142,52 +142,67 @@ export default function TestimonialCarousel() {
       id="projects"
       className="relative text-white py-12 px-4 overflow-hidden flex flex-col items-center justify-center md:gap-16 scroll-mt-20"
     >
-      <FadeIn direction="up" >
+      <FadeIn direction="up">
         <div className="relative flex flex-col items-center mt-6 mb-4">
-        <div className="px-4 py-1.5 rounded-full text-xl sm:text-2xl tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md">
-         <span aria-hidden="true" className="text-amber-300">Pro</span>jects
+          <div className="px-4 py-1.5 rounded-full text-xl sm:text-2xl tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md">
+            <span aria-hidden="true" className="text-amber-300">
+              Pro
+            </span>
+            jects
+          </div>
         </div>
-      </div>
       </FadeIn>
 
       {/* 3D Carousel Stage */}
       <FadeIn direction="right" delay={0.15}>
-      <div
-        className="relative w-full max-w-7xl h-110 sm:h-115 flex items-center justify-center"
-        style={{ perspective: "1000px" }}
-      >
         <div
-          className="relative w-full h-full flex items-center justify-center"
-          style={{ transformStyle: "preserve-3d" }}
+          className="relative w-[80%] mx-auto h-110 sm:h-115 flex items-center justify-center"
+          style={{ perspective: "1000px" }}
         >
-          {testimonials.map((item, index) => {
-            const style = getCardStyle(index);
+          <div
+            className="relative w-full h-full flex items-center justify-center"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            {testimonials.map((item, index) => {
+              const style = getCardStyle(index);
 
-            return (
-              <ProductCard
-                key={item.id}
-                item={item}
-                index={index}
-                activeIndex={activeIndex}
-                setActiveIndex={setActiveIndex}
-                style={style}
-              />
-            );
-          })}
+              return (
+                <ProductCard
+                  key={item.id}
+                  item={item}
+                  index={index}
+                  activeIndex={activeIndex}
+                  setActiveIndex={setActiveIndex}
+                  style={style}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
       </FadeIn>
 
       {/* Controls */}
       <FadeIn direction="up" delay={0.3}>
-      <div className={`relative flex items-center gap-2 ${liquidStyles.button}`}>
-        <IconButton onClick={handlePrev} aria-label="Previous Project" size="small" sx={{ color: "#fafafa" }}>
-          <ChevronLeftIcon fontSize="small" />
-        </IconButton>
-        <IconButton onClick={handleNext} aria-label="Next Project" size="small" sx={{ color: "#fafafa" }}>
-          <ChevronRightIcon fontSize="small" />
-        </IconButton>
-      </div>
+        <div
+          className={`relative flex items-center gap-2 ${liquidStyles.button}`}
+        >
+          <IconButton
+            onClick={handlePrev}
+            aria-label="Previous Project"
+            size="small"
+            sx={{ color: "#fafafa" }}
+          >
+            <ChevronLeftIcon fontSize="small" />
+          </IconButton>
+          <IconButton
+            onClick={handleNext}
+            aria-label="Next Project"
+            size="small"
+            sx={{ color: "#fafafa" }}
+          >
+            <ChevronRightIcon fontSize="small" />
+          </IconButton>
+        </div>
       </FadeIn>
     </section>
   );

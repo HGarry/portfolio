@@ -39,11 +39,11 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="p-6 py-12 scroll-mt-24">
+    <section id="contact" className="lg:w-[80%] mx-auto p-6 py-12 scroll-mt-24">
       <Grid container spacing={4} className="h-1/2">
         <Grid
           size={{ xs: 12, md: 12, lg: 6 }}
-          className={`${liquidStyles.card} w-3xl`}
+          className={`${liquidStyles.card} w-full`}
         >
           <FadeIn direction="right">
             <Grid container spacing={5} className="justify-center items-center">
@@ -60,7 +60,7 @@ function Contact() {
               </p>
 
               <Grid
-                size={{ xs: 12, md: 12, lg: 6 }}
+                size={{ xs: 12, md: 12, lg: 12 }}
                 className={`flex p-3 gap-6 ${liquidStyles.iconBox} items-center `}
               >
                 <LocalPhoneIcon sx={{ color: "#fafafa" }} />
@@ -73,12 +73,12 @@ function Contact() {
                 </Grid>
               </Grid>
               <Grid
-                size={{ xs: 12, md: 12, lg: 6 }}
+                size={{ xs: 12, md: 12, lg: 12 }}
                 className={`flex gap-6 ${liquidStyles.iconBox} items-center `}
               >
                 <EmailIcon sx={{ color: "#fafafa" }} />
                 <Grid
-                  size={{ xs: 12, md: 12, lg: 8 }}
+                  size={{ xs: 12, md: 12, lg: 12 }}
                   className={`${liquidStyles.glowTextCyan} flex justify-around flex-col md:flex-row lg:flex-col`}
                 >
                   <p>Mail</p>
@@ -103,7 +103,7 @@ function Contact() {
         </Grid>
         <Grid
           size={{ xs: 12, md: 12, lg: 6 }}
-          className={`${liquidStyles.card} w-3xl`}
+          className={`${liquidStyles.card} w-full`}
         >
           <FadeIn direction="left">
             <form onSubmit={handleSubmit}>

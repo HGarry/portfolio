@@ -32,7 +32,7 @@ function ProjectCard({
     <div
       onClick={() => setActiveIndex(index)}
       style={style}
-      className={`${liquidStyles.card} absolute w-[90vw] max-w-[340px] md:w-[520px] p-4 sm:p-6 transition-all duration-500 ease-out cursor-pointer select-none flex flex-col justify-between ${
+      className={`${liquidStyles.card} absolute w-[90vw] max-w-85 md:w-130 p-4 sm:p-6 transition-all duration-500 ease-out cursor-pointer select-none flex flex-col justify-between ${
         !isActive ? "hidden md:block" : "block"
       }`}
     >

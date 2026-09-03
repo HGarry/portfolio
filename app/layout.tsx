@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FramerProvider from "@/components/FramerProvider";
+import Footer from "@/components/Footer";
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <FramerProvider>
           {children}
         </FramerProvider>
+        <Footer />
       </body>
     </html>
   );

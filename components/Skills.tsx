@@ -80,23 +80,23 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen text-white py-12 px-4 sm:px-6 overflow-hidden flex flex-col gap-8 scroll-mt-24"
+      className="lg:w-[80%] mx-auto min-h-screen text-white py-12 px-4 sm:px-6 overflow-hidden flex flex-col gap-8 scroll-mt-24"
     >
       {/* 1. Skills Heading */}
       <FadeIn direction="up">
         <div className="flex justify-center">
           <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
-          S
-          <span aria-hidden="true" className="text-amber-300">
-            kill
-          </span>
-          s
-        </h2>
+            S
+            <span aria-hidden="true" className="text-amber-300">
+              kill
+            </span>
+            s
+          </h2>
         </div>
       </FadeIn>
 
       <StaggerGrid className="w-full mb-8">
-        <Grid container spacing={3} className="w-full justify-center">
+        <Grid container spacing={3} className="w-full">
           {skills.map((skill) => (
             <Skill key={skill.id} {...skill} />
           ))}
@@ -106,11 +106,11 @@ function Skills() {
       <FadeIn direction="up">
         <div className="flex justify-center">
           <h2 className="px-3 py-1 rounded-full text-2xl text-center tracking-widest font-extrabold uppercase bg-white/5 border border-white/10 backdrop-blur-md mb-4">
-          Educati
-          <span aria-hidden="true" className="text-amber-300">
-            on
-          </span>
-        </h2>
+            Educati
+            <span aria-hidden="true" className="text-amber-300">
+              on
+            </span>
+          </h2>
         </div>
       </FadeIn>
 

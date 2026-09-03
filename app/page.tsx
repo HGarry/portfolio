@@ -6,10 +6,11 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div
-      style={{ backgroundImage: "url('/images/hero.jpg')" }}
-      className="bg-cover bg-no-repeat"
-    >
+    <div className="w-full">
+      <div
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+        className="w-screen h-screen bg-cover bg-no-repeat fixed top-0 left-0 z-[-1]"
+      ></div>
       <HeroSection />
       <Skills />
       <TestimonialCarousel />

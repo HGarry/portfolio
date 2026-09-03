@@ -1,6 +1,5 @@
 import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { liquidStyles } from "./styles/styles";
 import { FadeIn } from "./Animation";
@@ -13,7 +12,7 @@ function HeroSection() {
       // style={{ backgroundImage: "url('/images/hero.jpg')" }}
       className="lg:w-screen w-full bg-cover overflow-hidden p-4 sm:p-6 md:p-8 lg:p-0 lg:pt-5 lg:px-8 flex flex-col justify-center pt-36 scroll-mt-24"
     >
-      <div className="flex flex-col-reverse items-center gap-6 lg:flex-row lg:justify-between lg:gap-0 lg:h-screen">
+      <div className="lg:w-[80%] mx-auto flex flex-col-reverse items-center gap-6 lg:flex-row lg:justify-between lg:gap-0 lg:h-screen">
         <div className={`left w-full lg:w-xl lg:p-5`}>
           <FadeIn direction="right" delay={0.3}>
             <h1
@@ -23,7 +22,7 @@ function HeroSection() {
             </h1>
           </FadeIn>
           <FadeIn direction="right" delay={0.3}>
-            <p className={`${liquidStyles.glowTextCyan} text-xl pr-10`}>
+            <p className={`${liquidStyles.glowTextCyan} text-2xl`}>
               Frontend Developer crafting clean, responsive, and data-driven web
               applications with React, Next.js, and Tailwind CSS. Focused on
               building production-ready user interfaces with solid state
